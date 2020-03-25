@@ -20,12 +20,16 @@ func main(){
 	s1 :=[]int{1,2,3,4}
 	randonParm(s1 ...)
 }
-func getNum(n int)(m int){
+func getNum(n int)( int, int){
 	sum :=0
 	for i:=1;i<=n;i++{
 		sum += i
 	}
-	return sum
+	y := 1
+	for i:=1;i<n;i++{
+		y *= i
+	}
+	return sum,y
 }
 func randonParm(num ... int){
 	sum := 0
